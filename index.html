@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en" ng-app="phonecatApp">
+  <base href="/app/">
   <head>
     <meta charset="utf-8">
     <title>Google Phone Gallery</title>
@@ -23,6 +24,15 @@
     <script src="phone-list/phone-list.component.js"></script>
     <script src="phone-detail/phone-detail.module.js"></script>
     <script src="phone-detail/phone-detail.component.js"></script>
+
+    <script src="/node_modules/core-js/client/shim.min.js"></script>
+    <script src="/node_modules/zone.js/dist/zone.js"></script>
+    <script src="/node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="/systemjs.config.js"></script>
+    <script>
+      System.import('/app');
+    </script>
   </head>
   <body>
 
