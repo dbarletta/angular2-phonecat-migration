@@ -1,7 +1,7 @@
 'use strict';
 
 angular.
-  module('phonecatApp').
+  module('phonecatApp', []).
   config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider: angular.ILocationProvider,
                     $routeProvider: angular.route.IRouteProvider) {
