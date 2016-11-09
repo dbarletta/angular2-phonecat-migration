@@ -3,4 +3,5 @@ declare var angular: any;
 import { AppModule } from './app.module';
 
 const upgradeAdapter = new UpgradeAdapter(AppModule);
-upgradeAdapter.bootstrap(document.body, ['phonecatApp']);
+
+upgradeAdapter.bootstrap(document.documentElement, ['phonecatApp']);
