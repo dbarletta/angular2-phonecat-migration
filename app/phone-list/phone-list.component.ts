@@ -1,21 +1,24 @@
+import { Phone, PhoneData } from '../core/phone/phone.service';
+declare var angular: any;
+
 class PhoneListController {
-  phones: any[];
+  phones: PhoneData[];
   orderProp: string;
-  query: string;
 
-  static $inject = ['Phone']; // The dependency injection annotations are attached to the class using a static property $inject
+  static $inject = ['phone']; // The dependency injection annotations are attached to the class using a static property $inject
 
-  constructor(Phone: any) {
-    this.phones = Phone.query();
+  constructor(phone: Phone) {
+    phone.query().subscribe(phones => {
+      this.phones = phones;
+    });
     this.orderProp = 'age';
   }
 }
 
 angular.
-  module('phoneList').
-  component('phoneList', {
-    templateUrl: 'phone-list/phone-list.template.html',
-    controller: PhoneListController
-  });
-
+module('phoneList').
+component('phoneList', {
+  templateUrl: 'phone-list/phone-list.template.html',
+  controller: PhoneListController
+});
 
