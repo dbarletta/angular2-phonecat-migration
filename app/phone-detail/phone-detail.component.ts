@@ -1,15 +1,20 @@
+import { Component, Inject } from '@angular/core';
 import { Phone, PhoneData } from '../core/phone/phone.service';
-declare var angular: any;
 
-class PhoneDetailController {
+@Component({
+  moduleId: module.id,
+  selector: 'phone-detail',
+  templateUrl: 'phone-detail.template.html',
+})
+
+export class PhoneDetailComponent {
   phone: PhoneData;
   mainImageUrl: string;
 
-  static $inject = ['$routeParams', 'phone'];
-
-  constructor($routeParams: angular.route.IRouteParamsService, phone: Phone) {
-    let phoneId = $routeParams['phoneId'];
-    phone.get(phoneId).subscribe(data => {
+  constructor(@Inject('$routeParams')
+                  $routeParams: angular.route.IRouteParamsService,
+              phone: Phone) {
+    phone.get($routeParams['phoneId']).subscribe(data => {
       this.phone = data;
       this.setImage(data.images[0]);
     });
@@ -19,10 +24,3 @@ class PhoneDetailController {
     this.mainImageUrl = imageUrl;
   }
 }
-
-angular.
-module('phoneDetail').
-component('phoneDetail', {
-  templateUrl: 'phone-detail/phone-detail.template.html',
-  controller: PhoneDetailController
-});
