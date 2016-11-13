@@ -1,5 +1,6 @@
 # AngularJS Phone Catalog Tutorial Application upgrade
 
+**Check out the various branches and their commit history** to see what was done to upgrade.
 
 ## Some Preparation
  - Follow style guide https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#single-responsibility
@@ -9,9 +10,6 @@
  - Module loader: Using a module loader such as SystemJS, Webpack, or Browserify allows us to use the built-in module systems of the TypeScript or ES2015 languages in our apps. We can use the import and export features that explicitly specify what code can and will be shared between different parts of the application. For ES5 applications we can use CommonJS style require and module.exports features. In both cases, the module loader will then take care of loading all the code the application needs in the correct order.
  
 ## Switch to TypeScript
-
-**Check out the commits for this branch**
-
  - Install TypeScript: yarn add typescript --dev
  - yarn add @types/jasmine @types/angular @types/angular-animate @types/angular-cookies @types/angular-mocks @types/angular-resource @types/angular-route @types/angular-sanitize --dev
  - Add tsconfig.json
