@@ -30,4 +30,7 @@ angular.module('phoneDetail')
     upgradeAdapter.downgradeNg2Component(PhoneDetailComponent) as angular.IDirectiveFactory
 );
 
-upgradeAdapter.bootstrap(document.documentElement, ['phonecatApp']);
+
+angular.element(document).ready(() => {
+    upgradeAdapter.bootstrap(document.documentElement, ['phonecatApp']);
+});
