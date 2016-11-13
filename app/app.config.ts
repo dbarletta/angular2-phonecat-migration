@@ -3,7 +3,8 @@
 angular.
   module('phonecatApp').
   config(['$locationProvider' ,'$routeProvider',
-    function config($locationProvider, $routeProvider) {
+    function config($locationProvider: angular.ILocationProvider,
+                    $routeProvider: angular.route.IRouteProvider) {
       $locationProvider.hashPrefix('!');
 
       $routeProvider.
