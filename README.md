@@ -16,7 +16,8 @@
  - Add type safety to the code
  - Turn component controllers into classes
 
-## Bootstrapping a hybrid 1+2 PhoneCat https://angular.io/docs/ts/latest/guide/upgrade.html#!#upgrading-with-the-upgrade-adapter
+## Bootstrapping a hybrid 1+2 PhoneCat 
+https://angular.io/docs/ts/latest/guide/upgrade.html#!#upgrading-with-the-upgrade-adapter
  - initialize an UpgradeAdapter
- - upgrade service: Now that we are loading phone.service.ts through an import that is resolved by SystemJS, we should remove the <script> tag for the service from index.html. This is something we'll do to all our components as we upgrade them. We could also use the toPromise method of Observable to turn those Observables into Promises in the service. This can in many cases further reduce the amount of changes needed in the component controllers.
+ - upgrade service: Now that we are loading phone.service.ts through an import that is resolved by SystemJS, we should remove the \<script> tag for the service from index.html. This is something we'll do to all our components as we upgrade them. We could also use the toPromise method of Observable to turn those Observables into Promises in the service. This can in many cases further reduce the amount of changes needed in the component controllers.
  
