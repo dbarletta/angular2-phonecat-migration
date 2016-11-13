@@ -2,9 +2,8 @@ import { Component, Inject } from '@angular/core';
 import { Phone, PhoneData } from '../core/phone/phone.service';
 
 @Component({
-  moduleId: module.id,
   selector: 'phone-detail',
-  templateUrl: 'phone-detail.template.html',
+  template: require('./phone-detail.template.html'),
 })
 
 export class PhoneDetailComponent {

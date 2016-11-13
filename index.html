@@ -14,25 +14,20 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
 
-    <script src="app.module.ng1.js"></script>
-    <script src="app.config.js"></script>
-    <script src="app.animations.js"></script>
-    <script src="core/core.module.js"></script>
-    <script src="core/phone/phone.module.js"></script>
-    <script src="phone-list/phone-list.module.js"></script>
-    <script src="phone-detail/phone-detail.module.js"></script>
-
     <script src="/node_modules/core-js/client/shim.min.js"></script>
     <script src="/node_modules/zone.js/dist/zone.js"></script>
     <script src="/node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="/node_modules/systemjs/dist/system.src.js"></script>
-    <script src="/systemjs.config.js"></script>
-    <script>
-      System.import('app');
-    </script>
+
+    <script src="/dist/app.module.ng1.js"></script>
+    <script src="/dist/app.config.js"></script>
+    <script src="/dist/app.animations.js"></script>
+    <script src="/dist/core.module.js"></script>
+    <script src="/dist/phone.module.js"></script>
+    <script src="/dist/phone-list.module.js"></script>
+    <script src="/dist/phone-detail.module.js"></script>
+    <script src="/dist/main.js"></script>
   </head>
   <body>
-
     <div class="view-container">
       <div ng-view class="view-frame"></div>
     </div>
